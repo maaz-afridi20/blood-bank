@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "364629007687",
+    "project_id": "smart-blood-bank-5f863",
+    "storage_bucket": "smart-blood-bank-5f863.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364629007687:android:f04b7ee254f4cb0b7ac062",
+        "android_client_info": {
+          "package_name": "com.example.smart_blood_bank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364629007687-3jjf74l1nck8v34ome28gqke4od01o96.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaPlcvv_ebMw0-KdohVjDitp0wmZMglVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364629007687-3jjf74l1nck8v34ome28gqke4od01o96.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
