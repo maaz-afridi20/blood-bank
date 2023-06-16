@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:smart_blood_bank/consts/colors.dart';
-import 'package:smart_blood_bank/consts/text_style.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 Widget profileListile({
   myleading,

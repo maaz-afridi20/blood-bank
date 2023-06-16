@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class BloodBanks extends StatelessWidget {
   const BloodBanks({super.key});

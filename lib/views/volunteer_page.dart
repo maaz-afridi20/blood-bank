@@ -1,8 +1,4 @@
-import 'dart:async';
-
-import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class VolunteerPage extends StatefulWidget {
   const VolunteerPage({super.key});
@@ -12,7 +8,6 @@ class VolunteerPage extends StatefulWidget {
 }
 
 class _VolunteerPageState extends State<VolunteerPage> {
-  @override
   GoogleMapController? myGoogleMapController;
   Completer<GoogleMapController> completerGoogleMapController = Completer();
 
@@ -60,7 +55,7 @@ class _VolunteerPageState extends State<VolunteerPage> {
           final currentPosition = snapshot.data!;
           markers.add(
             Marker(
-              markerId: const MarkerId('your position'),
+              markerId: const MarkerId('your Location'),
               position:
                   LatLng(currentPosition.latitude, currentPosition.longitude),
               infoWindow: const InfoWindow(title: 'Your Location'),

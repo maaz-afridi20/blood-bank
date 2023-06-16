@@ -1,10 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import '../consts/colors.dart';
-import '../consts/text_style.dart';
-import 'location_hospital_name.dart';
-import 'msg_and_call_container.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class DetailsCardWidget extends StatelessWidget {
   const DetailsCardWidget({super.key});

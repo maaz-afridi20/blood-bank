@@ -1,22 +1,11 @@
-import 'package:country_picker/country_picker.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:smart_blood_bank/authentications/phone_authentications.dart';
-import 'package:smart_blood_bank/controllers/check_controllers.dart';
-import 'package:smart_blood_bank/controllers/text_controllers.dart';
-import 'package:smart_blood_bank/reusable/container_button.dart';
-import 'package:smart_blood_bank/reusable/country_picker.dart';
-import 'package:smart_blood_bank/reusable/custom_text_field.dart';
-import 'package:smart_blood_bank/views/login.dart';
-import '../consts/colors.dart';
-import '../consts/const_texts.dart';
-import '../consts/text_style.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class CreateAccount extends StatelessWidget {
   CreateAccount({super.key});
   final myformkey = GlobalKey<FormState>();
   final MyCountryPickerClass selectCountry = MyCountryPickerClass();
-  final PhoneAuthenticationsClass phoneAuthenticationsClass = PhoneAuthenticationsClass();
+  final PhoneAuthenticationsClass phoneAuthenticationsClass =
+      PhoneAuthenticationsClass();
   final CheckController checkController = Get.put(CheckController());
   final TextControllers textControllers = Get.put(TextControllers());
 
@@ -93,31 +82,34 @@ class CreateAccount extends StatelessWidget {
                           myKeyboardtype: TextInputType.number,
                           hinText: 'enter phone number',
                           myController: textControllers.phoneController,
-                          sufficIcon: textControllers.phoneController.text.length >= 8
-                              ? Container(
-                                  margin: const EdgeInsets.all(10),
-                                  height: 20,
-                                  width: 20,
-                                  decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.green,
-                                  ),
-                                  child: const Icon(
-                                    Icons.done,
-                                    color: whitecolor,
-                                    size: 20,
-                                  ),
-                                )
-                              : null),
+                          sufficIcon:
+                              textControllers.phoneController.text.length >= 8
+                                  ? Container(
+                                      margin: const EdgeInsets.all(10),
+                                      height: 20,
+                                      width: 20,
+                                      decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.green,
+                                      ),
+                                      child: const Icon(
+                                        Icons.done,
+                                        color: whitecolor,
+                                        size: 20,
+                                      ),
+                                    )
+                                  : null),
                       const SizedBox(height: 12),
                       myCustomTextfield(
                         myvalidator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'enter password';
-                          } else if (!textControllers.passwordController.text.contains(
+                          } else if (!textControllers.passwordController.text
+                                  .contains(
                                 RegExp('[!@#%^&*()-._]'),
                               ) ||
-                              textControllers.passwordController.text.length < 8) {
+                              textControllers.passwordController.text.length <
+                                  8) {
                             return 'length should be 8 and must contains special characters';
                           }
                         },
@@ -126,7 +118,8 @@ class CreateAccount extends StatelessWidget {
                         myController: textControllers.passwordController,
                         sufficIcon: InkWell(
                           onTap: () {
-                            checkController.passToggle.value = !checkController.passToggle.value;
+                            checkController.passToggle.value =
+                                !checkController.passToggle.value;
                           },
                           child: checkController.passToggle.value
                               ? const Icon(Icons.visibility)

@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:smart_blood_bank/consts/colors.dart';
-import 'package:smart_blood_bank/consts/text_style.dart';
-import 'package:smart_blood_bank/reusable/profile_listile.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});

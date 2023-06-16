@@ -1,13 +1,4 @@
-import 'package:country_picker/country_picker.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:smart_blood_bank/reusable/country_picker.dart';
-import 'package:smart_blood_bank/views/change_password.dart';
-import '../consts/colors.dart';
-import '../consts/const_texts.dart';
-import '../consts/text_style.dart';
-import '../reusable/container_button.dart';
-import '../reusable/custom_text_field.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class ResettinPassword extends StatelessWidget {
   ResettinPassword({super.key});

@@ -1,15 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:smart_blood_bank/controllers/check_controllers.dart';
-import 'package:smart_blood_bank/controllers/text_controllers.dart';
-import 'package:smart_blood_bank/views/create_account.dart';
-import 'package:smart_blood_bank/views/nav_bar_home.dart';
-import 'package:smart_blood_bank/views/resetting_password.dart';
-import '../consts/colors.dart';
-import '../consts/const_texts.dart';
-import '../consts/text_style.dart';
-import '../reusable/container_button.dart';
-import '../reusable/custom_text_field.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
@@ -51,7 +40,8 @@ class Login extends StatelessWidget {
                       const SizedBox(height: 40),
                       myCustomTextfield(
                         myvalidator: (value) {
-                          if (textControllers.loginNumberController.value.text.isEmpty) {
+                          if (textControllers
+                              .loginNumberController.value.text.isEmpty) {
                             return 'enter phone number';
                           }
                         },
@@ -62,12 +52,17 @@ class Login extends StatelessWidget {
                       const SizedBox(height: 12),
                       myCustomTextfield(
                         myvalidator: (value) {
-                          if (textControllers.loginPasswordController.value.text.isEmpty) {
+                          if (textControllers
+                              .loginPasswordController.value.text.isEmpty) {
                             return 'enter password';
-                          } else if (!textControllers.loginPasswordController.value.text.contains(
+                          } else if (!textControllers
+                                  .loginPasswordController.value.text
+                                  .contains(
                                 RegExp('[!@#%^&*()-._]'),
                               ) ||
-                              textControllers.loginPasswordController.value.text.length < 8) {
+                              textControllers.loginPasswordController.value.text
+                                      .length <
+                                  8) {
                             return 'length should be 8 and must contains special characters';
                           }
                         },
@@ -76,7 +71,8 @@ class Login extends StatelessWidget {
                         obsecure: checkController.passToggle.value,
                         sufficIcon: InkWell(
                           onTap: () {
-                            checkController.passToggle.value = !checkController.passToggle.value;
+                            checkController.passToggle.value =
+                                !checkController.passToggle.value;
                           },
                           child: checkController.passToggle.value
                               ? const Icon(Icons.visibility)

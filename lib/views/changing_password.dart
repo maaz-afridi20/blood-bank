@@ -1,11 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:smart_blood_bank/reusable/custom_text_field.dart';
-import 'package:smart_blood_bank/views/resetting_password.dart';
-import '../consts/colors.dart';
-import '../consts/const_texts.dart';
-import '../consts/text_style.dart';
-import '../reusable/container_button.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class ChnaingPassword extends StatelessWidget {
   const ChnaingPassword({super.key});

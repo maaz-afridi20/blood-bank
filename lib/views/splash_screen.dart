@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:smart_blood_bank/consts/colors.dart';
-import 'package:smart_blood_bank/consts/text_style.dart';
-import 'package:smart_blood_bank/reusable/container_button.dart';
-import 'package:smart_blood_bank/views/create_account.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);

@@ -1,8 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import '../consts/text_style.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
-Widget containerButtonn({buttonText, myOnTap, required color, required buttonTextColor}) {
+Widget containerButtonn(
+    {buttonText, myOnTap, required color, required buttonTextColor}) {
   return GestureDetector(
     onTap: myOnTap,
     child: Container(

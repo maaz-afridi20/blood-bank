@@ -1,8 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import 'package:smart_blood_bank/main_home_page.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class PhoneAuthenticationsClass extends GetxController {
   final auth = FirebaseAuth.instance;
@@ -51,7 +47,8 @@ class PhoneAuthenticationsClass extends GetxController {
   verifyOtp(String otpp) async {
     try {
       var credentials = await auth.signInWithCredential(
-        PhoneAuthProvider.credential(verificationId: veriId.value, smsCode: otpp),
+        PhoneAuthProvider.credential(
+            verificationId: veriId.value, smsCode: otpp),
       );
       Get.to(() => const MainHomePage());
     } on FirebaseAuthException catch (e) {

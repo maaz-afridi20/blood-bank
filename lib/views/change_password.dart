@@ -1,12 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:smart_blood_bank/controllers/check_controllers.dart';
-import 'package:smart_blood_bank/controllers/text_controllers.dart';
-import 'package:smart_blood_bank/reusable/custom_text_field.dart';
-import 'package:smart_blood_bank/views/nav_bar_home.dart';
-import '../consts/colors.dart';
-import '../consts/text_style.dart';
-import '../reusable/container_button.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class ChangePassword extends StatelessWidget {
   ChangePassword({Key? key}) : super(key: key);
@@ -46,7 +38,8 @@ class ChangePassword extends StatelessWidget {
                         obsecure: checkController.passToggle.value,
                         sufficIcon: InkWell(
                           onTap: () {
-                            checkController.passToggle.value = !checkController.passToggle.value;
+                            checkController.passToggle.value =
+                                !checkController.passToggle.value;
                           },
                           child: checkController.passToggle.value
                               ? const Icon(Icons.visibility)
@@ -55,12 +48,17 @@ class ChangePassword extends StatelessWidget {
                                 ),
                         ),
                         myvalidator: (value) {
-                          if (textControllers.changePasswordController.value.text.isEmpty) {
+                          if (textControllers
+                              .changePasswordController.value.text.isEmpty) {
                             return 'enter password';
-                          } else if (!textControllers.changePasswordController.value.text.contains(
+                          } else if (!textControllers
+                                  .changePasswordController.value.text
+                                  .contains(
                                 RegExp('[!@#%^&*()-._]'),
                               ) ||
-                              textControllers.changePasswordController.value.text.length < 8) {
+                              textControllers.changePasswordController.value
+                                      .text.length <
+                                  8) {
                             return 'length should be 8 and must contains special characters';
                           }
                         },
@@ -69,7 +67,8 @@ class ChangePassword extends StatelessWidget {
                       const SizedBox(height: 12),
                       myCustomTextfield(
                         obsecure: checkController.confirmPassToggle.value,
-                        myController: textControllers.confirmPasswowrdController,
+                        myController:
+                            textControllers.confirmPasswowrdController,
                         sufficIcon: InkWell(
                           onTap: () {
                             checkController.confirmPassToggle.value =
@@ -82,13 +81,17 @@ class ChangePassword extends StatelessWidget {
                                 ),
                         ),
                         myvalidator: (value) {
-                          if (textControllers.confirmPasswowrdController.value.text.isEmpty) {
+                          if (textControllers
+                              .confirmPasswowrdController.value.text.isEmpty) {
                             return 'confirm password';
-                          } else if (!textControllers.confirmPasswowrdController.value.text
+                          } else if (!textControllers
+                                  .confirmPasswowrdController.value.text
                                   .contains(
                                 RegExp('[!@#%^&*()-._]'),
                               ) ||
-                              textControllers.confirmPasswowrdController.value.text.length < 8) {
+                              textControllers.confirmPasswowrdController.value
+                                      .text.length <
+                                  8) {
                             return 'length should be 8 and must contains special characters';
                           }
                         },
@@ -99,9 +102,12 @@ class ChangePassword extends StatelessWidget {
                         myOnTap: () {
                           if (formkey.currentState!.validate()) {
                             textControllers.changePasswordController.clear();
-                            textControllers.changePasswordController.text.trim();
+                            textControllers.changePasswordController.text
+                                .trim();
                             textControllers.confirmPasswowrdController.clear();
-                            textControllers.confirmPasswowrdController.value.text.trim();
+                            textControllers
+                                .confirmPasswowrdController.value.text
+                                .trim();
                             Get.to(() => NavBarHome());
                           }
                         },

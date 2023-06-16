@@ -1,11 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:smart_blood_bank/views/profile.dart';
-import 'package:smart_blood_bank/views/volunteer_page.dart';
-
-import '../consts/colors.dart';
-import '../main_home_page.dart';
-import 'blood_bank_page.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class NavBarHome extends StatelessWidget {
   NavBarHome({Key? key}) : super(key: key);

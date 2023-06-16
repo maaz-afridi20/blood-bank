@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import '../consts/colors.dart';
-import '../consts/text_style.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 // ignore: must_be_immutable
 class MessgAndCallContainer extends StatelessWidget {

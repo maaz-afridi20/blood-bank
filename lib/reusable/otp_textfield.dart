@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
-import '../consts/colors.dart';
-import '../consts/text_style.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class OtpTextField extends StatelessWidget {
   const OtpTextField({super.key});

@@ -1,5 +1,4 @@
-import 'package:country_picker/country_picker.dart';
-import 'package:get/get.dart';
+import 'package:smart_blood_bank/consts/exports.dart';
 
 class MyCountryPickerClass extends GetxController {
   Rx<Country> selectedCountry = Rx<Country>(
